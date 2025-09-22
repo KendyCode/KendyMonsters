@@ -2,6 +2,8 @@
 import monde.Zone
 import org.example.dresseur.Entraineur
 import monstre.EspeceMonstre
+import monstre.IndividuMonstre
+
 
 var joueur = Entraineur(1, "Sacha", 100)
 var rival = Entraineur(2,"Regis",200)
@@ -17,9 +19,21 @@ var zone1 = Zone(id=1, nom ="Foret Sombre", expZone = 10, especesMonstres = muta
 var zone2 = Zone(id=2, nom ="Caverne Obscure", expZone = 20, especesMonstres = mutableListOf(especeAquamy))
 var zone3 = Zone(id=3, nom ="Montagne Ardente", expZone = 40, especesMonstres = mutableListOf(especeAquamy,especeLaoumi))
 
+
 fun main() {
-    zone1.zoneSuivante = zone2
-    zone2.zonePrecedente = zone1
+    val monstre1 = IndividuMonstre(1, "springleaf", especeSpringleaf, null,1500.0)
+    val monstre2 = IndividuMonstre(2, "flamkip",especeFlamkip,null,1500.0)
+    val monstre3 = IndividuMonstre(3, "aquamy",especeAquamy,null,1500.0)
+
+
+    println(monstre1.pv)
+    println(monstre2.pv)
+    monstre1.attaquer(monstre2)
+    println(monstre1.pv)
+    println(monstre2.pv)
+
+    monstre1.afficheDetail()
+
 }
 
 /**

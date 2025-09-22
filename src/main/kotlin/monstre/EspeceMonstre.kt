@@ -47,6 +47,7 @@ class EspeceMonstre(
     val description: String = "",
     val particularites: String = "",
     val caracteres: String = ""){
+
     /**
      * Affiche la représentation artistique ASCII du monstre.
      *

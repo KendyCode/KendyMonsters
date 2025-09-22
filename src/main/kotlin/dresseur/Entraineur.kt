@@ -1,5 +1,7 @@
 package org.example.dresseur
 
+import monstre.EspeceMonstre
+
 /**
  * Représente un entraîneur dans le contexte du jeu.
  *
@@ -15,8 +17,8 @@ class Entraineur(
     var id: Int,
     var nom: String,
     var argents:Int,
-    //TODO equipeMonstre
-    //TODO boiteMonstre
+    var equipeMonstre: MutableList<EspeceMonstre> = mutableListOf(),
+    var boiteMonstre: MutableList<EspeceMonstre> = mutableListOf(),
     //TODO sacAKube
 ) {
     /**
