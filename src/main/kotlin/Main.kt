@@ -1,4 +1,6 @@
 
+import item.Badge
+import item.MonsterKube
 import monde.Zone
 import org.example.dresseur.Entraineur
 import monstre.EspeceMonstre
@@ -19,6 +21,7 @@ var zone1 = Zone(id=1, nom ="Foret Sombre", expZone = 10, especesMonstres = muta
 var zone2 = Zone(id=2, nom ="Caverne Obscure", expZone = 20, especesMonstres = mutableListOf(especeAquamy))
 var zone3 = Zone(id=3, nom ="Montagne Ardente", expZone = 40, especesMonstres = mutableListOf(especeAquamy,especeLaoumi))
 
+var objet1 = MonsterKube(1,"cube", "description",11.0)
 
 fun main() {
     val monstre1 = IndividuMonstre(1, "springleaf", especeSpringleaf, null,1500.0)
@@ -26,13 +29,20 @@ fun main() {
     val monstre3 = IndividuMonstre(3, "aquamy",especeAquamy,null,1500.0)
 
 
-    println(monstre1.pv)
+    /*println(monstre1.pv)
     println(monstre2.pv)
     monstre1.attaquer(monstre2)
     println(monstre1.pv)
     println(monstre2.pv)
 
     monstre1.afficheDetail()
+
+
+
+    objet1.utiliser(monstre1)
+    println(monstre1.nom)
+    println(joueur.equipeMonstre)*/
+
 
 }
 
@@ -59,3 +69,22 @@ fun changeCouleur(message: String, couleur:String=""): String {
     }
     return "$codeCouleur$message$reset"
 }
+
+/* val monstre1 = IndividuMonstre(1, "springleaf", especeSpringleaf, null,1500.0)
+val monstre2 = IndividuMonstre(2, "flamkip",especeFlamkip,null,1500.0)
+val monstre3 = IndividuMonstre(3, "aquamy",especeAquamy,null,1500.0)
+
+
+println(monstre1.pv)
+println(monstre2.pv)
+monstre1.attaquer(monstre2)
+println(monstre1.pv)
+println(monstre2.pv)
+
+monstre1.afficheDetail()
+
+
+
+objet1.utiliser(monstre1)
+println(monstre1.nom)
+println(joueur.equipeMonstre) */
