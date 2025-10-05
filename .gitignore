@@ -43,3 +43,15 @@ bin/
 
 ### Mac OS ###
 .DS_Store
+
+# Gradle
+.gradle/
+gradle/caches/
+
+# IntelliJ / Android Studio
+.idea/
+*.iml
+
+# Build outputs
+/build/
+out/

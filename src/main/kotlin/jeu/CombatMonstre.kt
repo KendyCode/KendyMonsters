@@ -59,10 +59,11 @@ class CombatMonstre(
             return false
         }
         else{
-            println("Choisis entre (1,2,3)")
+            println("Choisis entre (1 : ATTAQUER,2 : PRENDRE UN ITEM,3 : REMPLACER SON MONSTRE)")
             var choixAction = readln().toInt()
             if (choixAction==1){
                 monstreJoueur.attaquer(monstreSauvage)
+                return true
             }
             else if(choixAction==2){
                 println(joueur.sacAItems)
@@ -106,6 +107,8 @@ class CombatMonstre(
         println("PV : ${monstreSauvage.pv} / ${monstreSauvage.pvMax}")
         println(monstreSauvage.espece.afficheArt())
         println(monstreSauvage.espece.afficheArt(false))
+
+        println("MOOOOOONNNN MONSTTRRREEEEEEEEEEEEEEEEE")
         println("Niveau : ${monstreJoueur.niveau}")
         println("PV : ${monstreJoueur.pv} / ${monstreJoueur.pvMax}")
     }

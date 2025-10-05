@@ -66,6 +66,7 @@ class Partie(
             joueur.equipeMonstre[anciennePosition] = temp
 
         }
+
     }
 
     fun examineEquipe(){
@@ -80,10 +81,42 @@ class Partie(
             "m" -> this.modifierOrdreEquipe()
             else -> joueur.equipeMonstre[choix.toInt()].afficheDetail()
         }
+
     }
 
     fun jouer(){
-        println("Vous êtes dans ${this.zone.nom}")
+        println("Vous êtes dans ${zone.nom}")
+        println("1 => Rencontrer un monstre sauvage")
+        println("2 => Examiner l’équipe de monstres ")
+        println("3 => Aller à la zone suivante ")
+        println("4 => Aller à la zone précédente  ")
+        var choix = readln().toInt()
+        when(choix){
+            1 -> {
+                zone.rencontreMonstre()
+                jouer()
+            }
+            2 -> {
+                this.examineEquipe()
+                jouer()
+            }
+            3 -> if(zone.zoneSuivante != null){
+                zone = zone.zoneSuivante!!
+                jouer()
+            }else{
+                println("Pas de zone suivante")
+                jouer()
+            }
+            4 -> if(zone.zonePrecedente!= null){
+                zone = zone.zonePrecedente!!
+                jouer()
+            }else{
+                println("Pas de zone précédente")
+                jouer()
+            }
+
+        }
+
     }
 
 
