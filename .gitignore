@@ -55,3 +55,6 @@ gradle/caches/
 # Build outputs
 /build/
 out/
+
+# Ignorer les distributions locales de Gradle
+gradle/wrapper/dists/
