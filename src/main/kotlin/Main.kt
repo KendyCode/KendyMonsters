@@ -8,7 +8,7 @@ import monstre.IndividuMonstre
 import jeu.Partie
 
 
-var joueur = Entraineur(1, "Sacha", 100)
+var simon = Entraineur(1, "Sacha", 100)
 var rival = Entraineur(2,"Regis",200)
 
 
@@ -32,7 +32,7 @@ fun main() {
 
     route1.zoneSuivante = route2
     route2.zonePrecedente = route1
-    joueur.sacAItems.add(objet1)
+    simon.sacAItems.add(objet1)
 
     val partie = nouvellePartie()
     partie.choixStarter()
@@ -44,7 +44,7 @@ fun nouvellePartie():Partie{
     println("Bienvenue dans le monde magique des Pokémon! Mon nom est ChenZen! Les gens souvent m'appellent le Prof Pokémon! Ce monde est peuplé de créatures du nom de Pokémon!")
     println("Rentrez votre nom : ")
     val nomJoueur = readln()
-    val PartieJoueur = Partie(1,joueur,route1)
+    val PartieJoueur = Partie(1,simon,route1)
     return PartieJoueur
 }
 
